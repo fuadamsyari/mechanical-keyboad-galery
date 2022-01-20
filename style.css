@@ -1,0 +1,189 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* gas keun */
+
+body,
+html {
+  background-color: rgb(204, 204, 204);
+}
+.container {
+  width: 780px;
+  height: 1300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #eaeaea;
+  margin: auto;
+}
+
+.container .jumbo {
+  width: 46.3em;
+  border-radius: 0.3em;
+  padding: 0.8em 0;
+}
+.container .thumbs {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(195px, 1fr)); */
+  grid-template-columns: auto auto auto;
+  justify-content: space-evenly;
+  gap: 0.8em;
+  box-sizing: border-box;
+}
+.container .thumbs img {
+  width: 15em;
+  border-radius: 0.3em;
+  cursor: pointer;
+  border: 3px solid transparent;
+  box-sizing: border-box;
+  transition: 100ms;
+}
+
+.container .thumbs img:hover {
+  opacity: 0.5;
+  transform: scale(1.015);
+  border: 3px solid black;
+}
+
+.active {
+  opacity: 0.5;
+  border: 3px solid black !important;
+}
+
+.fade {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
